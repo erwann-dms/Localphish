@@ -39,7 +39,7 @@ docker-compose up --build
 ```
 L’application sera disponible sur : http://localhost:5000
 
-###Configuration
+### Configuration
 
 Le fichier config.yaml permet de configurer :
 
@@ -47,7 +47,7 @@ Le fichier config.yaml permet de configurer :
 - SMTP (serveur, port, TLS, identifiants)
 - DNS spoofing (activation, domaines, IP de redirection)
 
-###Utilisation
+### Utilisation
 
 - Connectez-vous avec vos identifiants admin.
 - Créez et configurez une campagne (choix template HTML, spoofing DNS).
@@ -55,17 +55,17 @@ Le fichier config.yaml permet de configurer :
 - Visualisez les identifiants récoltés en temps réel.
 - Gérer le cycle complet de la campagne (modifier, arrêter, supprimer).
 
-###Disclaimer éthique
+### Disclaimer éthique
 
 Ce projet est uniquement destiné à un usage pédagogique, légal et éthique.
 N’utilisez jamais cet outil sans consentement explicite des personnes ciblées.
 Toute utilisation malveillante est strictement interdite et hors de la portée de ce projet.
 
-###Licence
+### Licence
 
 MIT
 
-###Architecture du projet
+### Architecture du projet
 ```bash
 LocalPhish-Advanced/
 ├── app/
@@ -97,7 +97,7 @@ LocalPhish-Advanced/
 └── README.md
 ```
 
-###Ajouter des templates de phishing
+### Ajouter des templates de phishing
 
 Depuis l’interface, éditez ou créez une campagne.
 Collez votre code HTML personnalisé dans le champ template.

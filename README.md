@@ -1,7 +1,7 @@
 # localphish
 
 ![Badge Docker](https://img.shields.io/docker/image-size/library/python/latest)
-![GitHub](https://img.shields.io/github/license/erwann-dms/localphish)
+![GitHub](https://img.shields.io/github/license/erwann-dms/Localphish)
 
 ## Objectif
 Outil pédagogique complet de gestion de campagnes phishing local, inspiré de GoPhish, pour sensibilisation, tests internes et formation.

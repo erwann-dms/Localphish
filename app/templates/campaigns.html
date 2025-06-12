@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Campaigns</h2>
+<a href="{{ url_for('campaigns.new_campaign') }}">Create New Campaign</a>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Name</th>
+        <th>Active</th>
+        <th>Actions</th>
+    </tr>
+    {% for campaign in campaigns %}
+    <tr>
+        <td>{{ campaign.name }}</td>
+        <td>{{ 'Yes' if campaign.is_active else 'No' }}</td>
+        <td>
+            <a href="{{ url_for('campaigns.edit_campaign', campaign_id=campaign.id) }}">Edit</a> |
+            <form style="display:inline;" method="POST" action="{{ url_for('campaigns.delete_campaign', campaign_id=campaign.id) }}" onsubmit="return confirm('Delete campaign?');">
+                {{ csrf_token() }}
+                <button type="submit">Delete</button>
+            </form> |
+            <form style="display:inline;" method="POST" action="{{ url_for('campaigns.toggle_campaign', campaign_id=campaign.id) }}">
+                {{ csrf_token() }}
+                <button type="submit">{{ 'Stop' if campaign.is_active else 'Start' }}</button>
+            </form> |
+            <a href="{{ url_for('campaigns.view_credentials', campaign_id=campaign.id) }}">View Credentials</a>
+        </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="4">No campaigns found.</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

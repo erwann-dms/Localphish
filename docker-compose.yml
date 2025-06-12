@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  localphish:
+    build: .
+    ports:
+      - "5000:5000"
+      - "8081:8081" # for phishing server (example)
+    volumes:
+      - .:/app
+    restart: unless-stopped

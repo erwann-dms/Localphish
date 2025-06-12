@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/youruser/LocalPhish-Pro)
 
 ## Objectif
-Outil professionnel de démonstration de phishing en local pour sensibilisation et tests internes.
+Outil de démonstration de phishing en local pour sensibilisation et tests internes.
 
 ## Fonctionnalités
 - Interface web admin (login, gestion campagnes, logs)

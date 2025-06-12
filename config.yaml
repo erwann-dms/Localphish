@@ -1,0 +1,10 @@
+admin:
+  username: admin
+  password: password123
+
+smtp:
+  server: smtp.example.com
+  port: 587
+  username: you@example.com
+  password: yourpassword
+  use_ssl: false

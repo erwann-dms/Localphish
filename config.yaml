@@ -1,0 +1,17 @@
+admin:
+  username: admin
+  password_hash: "pbkdf2:sha256:260000$XUixrNqip1vnXOPa$c14ed87a5d0a8e289f3118b7b4520e14f399e59ed7bb60df54a00a39ed98e986"  # hash for "adminpass"
+
+smtp:
+  server: smtp.example.com
+  port: 587
+  use_tls: true
+  username: user@example.com
+  password: yourpassword
+
+dns_spoof:
+  enabled: false
+  domains:
+    - "example.com"
+    - "test.com"
+  redirect_ip: "127.0.0.1"

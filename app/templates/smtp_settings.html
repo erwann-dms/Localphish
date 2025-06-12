@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>SMTP Configuration</h2>
+<form method="POST">
+    {{ csrf_token() }}
+    <label>SMTP Server:</label><br>
+    <input type="text" name="server" required value="{{ smtp.server if smtp else '' }}"><br><br>
+    
+    <label>Port:</label><br>
+    <input type="number" name="port" required value="{{ smtp.port if smtp else 587 }}"><br><br>
+    
+    <label><input type="checkbox" name="use_tls" {% if smtp and smtp.use_tls %}checked{% endif %}> Use TLS</label><br><br>
+    
+    <label>Username:</label><br>
+    <input type="text" name="username" value="{{ smtp.username if smtp else '' }}"><br><br>
+    
+    <label>Password:</label><br>
+    <input type="password" name="password" value="{{ smtp.password if smtp else '' }}"><br><br>
+    
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

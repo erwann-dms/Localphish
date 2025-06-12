@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>DNS Spoofing Settings</h2>
+<form method="POST">
+    {{ csrf_token() }}
+    <label><input type="checkbox" name="enabled" {% if enabled %}checked{% endif %}> Enable DNS Spoofing</label><br><br>
+    <label>Domains to spoof (comma separated):</label><br>
+    <input type="text" name="domains" size="80" value="{{ domains }}"><br><br>
+    <label>Redirect IP address:</label><br>
+    <input type="text" name="ip" value="{{ ip }}"><br><br>
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

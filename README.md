@@ -70,19 +70,30 @@ MIT
 LocalPhish-Advanced/
 ├── app/
 │   ├── __init__.py
+│   ├── models.py
 │   ├── auth.py
 │   ├── campaigns.py
 │   ├── dns_spoof.py
-│   ├── models.py
 │   ├── proxy.py
 │   ├── smtp_sender.py
 │   ├── templates/
-│   └── static/
+│   │   ├── base.html
+│   │   ├── login.html
+│   │   ├── dashboard.html
+│   │   ├── campaigns.html
+│   │   ├── campaign_form.html
+│   │   ├── credentials.html
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── main.js
 ├── config.yaml
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
 ├── run.py
+├── LICENSE
 └── README.md
 ```
 

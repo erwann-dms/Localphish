@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ 'Edit' if campaign else 'New' }} Campaign</h2>
+<form method="POST">
+    {{ csrf_token() }}
+    <label for="name">Campaign Name:</label><br>
+    <input type="text" id="name" name="name" required value="{{ campaign.name if campaign else '' }}" /><br><br>
+    
+    <label for="template_html">HTML Template:</label><br>
+    <textarea id="template_html" name="template_html" rows="15" cols="80" required>{{ campaign.template_html if campaign else '<html><body><h1>Phishing Page</h1><form method="POST"><input name="username"><input name="password" type="password"><button type="submit">Login</button></form></body></html>' }}</textarea><br><br>
+    
+    <button type="submit">Save</button>
+    <a href="{{ url_for('campaigns.dashboard') }}">Cancel</a>
+</form>
+{% endblock %}
